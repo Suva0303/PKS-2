@@ -11,12 +11,19 @@ _______
 
 ______
 ## Главная страница 
-![image](https://github.com/user-attachments/assets/2a2949fa-bfcb-4d36-b836-2d12d08044bb)
+![Screenshot 2024-09-21 205719](https://github.com/user-attachments/assets/562a382d-b3e3-4e2e-a4f6-58fff89bd491)
+
 
 ________
 ## Старница товара 
 
-![image](https://github.com/user-attachments/assets/70e7c186-368a-4b94-a3c5-d1c7971a9b9f)
+![Screenshot 2024-09-21 205807](https://github.com/user-attachments/assets/72e2f7e4-ac15-4ab1-a82c-1650383f59fb)
+
 
 ## Страница покупки книги 
-![image](https://github.com/user-attachments/assets/d04949f4-be9c-4d4d-acd7-0a642d1b9279)
+
+![Screenshot 2024-09-21 205906](https://github.com/user-attachments/assets/57865a36-299e-4ae1-92d4-f6b324255dc2)
+
+
+## Версия на эмуляторе 
+![Screenshot 2024-09-21 203516](https://github.com/user-attachments/assets/f241387c-0a04-4550-9103-ce0e5f7fc12a)
