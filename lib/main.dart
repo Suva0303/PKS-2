@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-import 'book.dart';
 
 void main() {
   runApp(BooksApp());
+}
+
+class Book {
+  final String name;
+  final String imageUrl;
+  final double price;
+
+  Book({required this.name, required this.imageUrl, required this.price});
 }
 
 class BooksApp extends StatelessWidget {
@@ -13,22 +20,24 @@ class BooksApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
         scaffoldBackgroundColor: const Color.fromARGB(255, 240, 230, 250),
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.black),
-          bodyMedium: TextStyle(color: Colors.black),
-        ),
       ),
+      debugShowCheckedModeBanner: false, // Убираем надпись DEBUG
       home: BooksList(),
     );
   }
 }
 
-class BooksList extends StatelessWidget {
-  final List<Book> books = [
+class BooksList extends StatefulWidget {
+  @override
+  _BooksListState createState() => _BooksListState();
+}
+
+class _BooksListState extends State<BooksList> {
+  List<Book> books = [
     Book(
       name: 'Оно',
       imageUrl: '../lib/images/it.jpeg',
-      price: 900, // Цены в рублях
+      price: 900,
     ),
     Book(
       name: 'Гарри Поттер',
@@ -47,38 +56,58 @@ class BooksList extends StatelessWidget {
     ),
   ];
 
+  void _addBook(Book book) {
+    setState(() {
+      books.add(book);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Доступные Книги'),
-      ),
-      body: Center(
-        child: ListView.builder(
-          itemCount: books.length,
-          itemBuilder: (context, index) {
-            return Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-                side: const BorderSide(color: Colors.black, width: 1),
-              ),
-              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              child: ListTile(
-                title: Text(books[index].name),
-                subtitle:
-                    Text('${books[index].price} ₽'), // Формат цен в рублях
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => BookDetail(book: books[index]),
-                    ),
-                  );
-                },
-              ),
-            );
-          },
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text('Доступные Книги'),
+            IconButton(
+              icon: const Icon(Icons.add),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AddBookScreen(onAddBook: _addBook),
+                  ),
+                );
+              },
+            ),
+          ],
         ),
+      ),
+      body: ListView.builder(
+        itemCount: books.length,
+        itemBuilder: (context, index) {
+          return Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+              side: const BorderSide(color: Colors.black, width: 1),
+            ),
+            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: ListTile(
+              title: Text(books[index].name),
+              subtitle: Text('${books[index].price} ₽'),
+              leading: Image.asset(books[index].imageUrl),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BookDetail(book: books[index]),
+                  ),
+                );
+              },
+            ),
+          );
+        },
       ),
     );
   }
@@ -100,9 +129,8 @@ class BookDetail extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.network(book.imageUrl),
+              Image.asset(book.imageUrl),
               const SizedBox(height: 8),
               Text(book.name,
                   style: const TextStyle(
@@ -146,6 +174,62 @@ class BookDetail extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class AddBookScreen extends StatelessWidget {
+  final Function(Book) onAddBook;
+
+  AddBookScreen({required this.onAddBook});
+
+  final _nameController = TextEditingController();
+  final _priceController = TextEditingController();
+  final _imageUrlController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Добавить новую книгу'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: _nameController,
+              decoration: const InputDecoration(labelText: 'Название книги'),
+            ),
+            TextField(
+              controller: _priceController,
+              decoration: const InputDecoration(labelText: 'Цена'),
+              keyboardType: TextInputType.number,
+            ),
+            TextField(
+              controller: _imageUrlController,
+              decoration:
+                  const InputDecoration(labelText: 'Введите адрес изображения'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                final String name = _nameController.text;
+                final double price = double.parse(_priceController.text);
+                final String imageUrl = _imageUrlController.text;
+
+                if (name.isNotEmpty && price > 0 && imageUrl.isNotEmpty) {
+                  final newBook =
+                      Book(name: name, imageUrl: imageUrl, price: price);
+                  onAddBook(newBook);
+                  Navigator.pop(context);
+                }
+              },
+              child: const Text('Добавить книгу'),
+            ),
+          ],
         ),
       ),
     );

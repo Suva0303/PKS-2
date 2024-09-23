@@ -1,7 +1,7 @@
 class Book {
   final String name;
-  final String imageUrl;
   final double price;
+  final String imageUrl;
 
-  Book({required this.name, required this.imageUrl, required this.price});
+  Book({required this.name, required this.price, required this.imageUrl});
 }
