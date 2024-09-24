@@ -19,7 +19,11 @@ ________
 
 ![image](https://github.com/user-attachments/assets/839f2937-6d10-4f8c-84f0-357b1b463483)
 
-
+________
 ## Страница после добавления книги 
 ![image](https://github.com/user-attachments/assets/6b6d6919-e1e5-4774-bbb2-afed34a11259)
 
+_______
+
+## Окно отображение карточки книги 
+![image](https://github.com/user-attachments/assets/061a7779-fa7b-4897-be16-68fa4ac89668)
