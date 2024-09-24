@@ -1,4 +1,4 @@
-# Отчет по практике №3  
+# Отчет по практике №4
 ## Дисциплина: Программирование корпоративных систем
 ### Студент: Алибеков Кайратбек 
 ### Группа: ЭФБО-07-22
@@ -10,13 +10,16 @@ _______
 Запуск на Chrome 
 
 ______
-## Главная страница 
-![image](https://github.com/user-attachments/assets/2a2949fa-bfcb-4d36-b836-2d12d08044bb)
+## Главная страница с возможностью добавления новой книги 
+![image](https://github.com/user-attachments/assets/71ef9f77-6b17-4bef-b903-646ed17572c3)
+
 
 ________
-## Старница товара 
+## Старница добавления новой книги 
 
-![image](https://github.com/user-attachments/assets/70e7c186-368a-4b94-a3c5-d1c7971a9b9f)
+![image](https://github.com/user-attachments/assets/839f2937-6d10-4f8c-84f0-357b1b463483)
 
-## Страница покупки книги 
-![image](https://github.com/user-attachments/assets/d04949f4-be9c-4d4d-acd7-0a642d1b9279)
+
+## Страница после добавления книги 
+![image](https://github.com/user-attachments/assets/6b6d6919-e1e5-4774-bbb2-afed34a11259)
+
