@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
+import 'book.dart';
+import 'favorites.dart';
+import 'profile.dart';
 
 void main() {
   runApp(BooksApp());
-}
-
-class Book {
-  final String name;
-  final String imageUrl;
-  final double price;
-
-  Book({required this.name, required this.imageUrl, required this.price});
 }
 
 class BooksApp extends StatelessWidget {
@@ -21,7 +16,7 @@ class BooksApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         scaffoldBackgroundColor: const Color.fromARGB(255, 240, 230, 250),
       ),
-      debugShowCheckedModeBanner: false, // Убираем надпись DEBUG
+      debugShowCheckedModeBanner: false,
       home: BooksList(),
     );
   }
@@ -56,9 +51,21 @@ class _BooksListState extends State<BooksList> {
     ),
   ];
 
+  List<Book> favorites = []; // Список избранных книг
+
   void _addBook(Book book) {
     setState(() {
       books.add(book);
+    });
+  }
+
+  void _toggleFavorite(Book book) {
+    setState(() {
+      if (favorites.contains(book)) {
+        favorites.remove(book);
+      } else {
+        favorites.add(book);
+      }
     });
   }
 
@@ -70,6 +77,28 @@ class _BooksListState extends State<BooksList> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text('Доступные Книги'),
+            IconButton(
+              icon: const Icon(Icons.favorite),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FavoritesScreen(favorites: favorites),
+                  ),
+                );
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.person),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfileScreen(),
+                  ),
+                );
+              },
+            ),
             IconButton(
               icon: const Icon(Icons.add),
               onPressed: () {
@@ -97,6 +126,17 @@ class _BooksListState extends State<BooksList> {
               title: Text(books[index].name),
               subtitle: Text('${books[index].price} ₽'),
               leading: Image.asset(books[index].imageUrl),
+              trailing: IconButton(
+                icon: Icon(
+                  favorites.contains(books[index])
+                      ? Icons.favorite
+                      : Icons.favorite_border,
+                  color: favorites.contains(books[index]) ? Colors.red : null,
+                ),
+                onPressed: () {
+                  _toggleFavorite(books[index]);
+                },
+              ),
               onTap: () {
                 Navigator.push(
                   context,
