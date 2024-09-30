@@ -1,4 +1,4 @@
-# Отчет по практике №3  
+# Отчет по практике №5  
 ## Дисциплина: Программирование корпоративных систем
 ### Студент: Алибеков Кайратбек 
 ### Группа: ЭФБО-07-22
@@ -10,13 +10,19 @@ _______
 Запуск на Chrome 
 
 ______
-## Главная страница 
-![image](https://github.com/user-attachments/assets/2a2949fa-bfcb-4d36-b836-2d12d08044bb)
+## Главная страница с навигационной панель
+![image](https://github.com/user-attachments/assets/852f2a5c-7cce-4aaa-8a7c-7b0a54b82781)
+
 
 ________
-## Старница товара 
+## Старница избранного 
 
-![image](https://github.com/user-attachments/assets/70e7c186-368a-4b94-a3c5-d1c7971a9b9f)
+![image](https://github.com/user-attachments/assets/68bfd85a-384f-49ad-bb67-739bbf2f4c13)
 
-## Страница покупки книги 
-![image](https://github.com/user-attachments/assets/d04949f4-be9c-4d4d-acd7-0a642d1b9279)
+
+## Страница профиля
+![image](https://github.com/user-attachments/assets/6f01ca6d-ec1c-4582-a56b-9193ff8cdf84)
+
+### В странице профиля предусмотренна кнопка редактирования 
+#### Она позволяет редактировать имя, почту и фото профиля
+![image](https://github.com/user-attachments/assets/a2701c1c-5f4b-4651-ac29-06a0ff2776ec)
