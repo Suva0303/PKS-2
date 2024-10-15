@@ -1,4 +1,4 @@
-# Отчет по практике №3  
+# Отчет по практике №6  
 ## Дисциплина: Программирование корпоративных систем
 ### Студент: Алибеков Кайратбек 
 ### Группа: ЭФБО-07-22
@@ -10,13 +10,16 @@ _______
 Запуск на Chrome 
 
 ______
-## Главная страница 
-![image](https://github.com/user-attachments/assets/2a2949fa-bfcb-4d36-b836-2d12d08044bb)
+## Главная страница с функцией корзина
+![image](https://github.com/user-attachments/assets/89d0aeb8-5cd8-42a7-a006-fabcae6e4ff0)
+
 
 ________
-## Старница товара 
+## Старница корзины с возможностью изменения количества товара и удаления из корзины
 
-![image](https://github.com/user-attachments/assets/70e7c186-368a-4b94-a3c5-d1c7971a9b9f)
+![image](https://github.com/user-attachments/assets/82882650-272a-4702-86fc-34ef2474111c)
 
-## Страница покупки книги 
-![image](https://github.com/user-attachments/assets/d04949f4-be9c-4d4d-acd7-0a642d1b9279)
+______
+![image](https://github.com/user-attachments/assets/73501264-1096-4351-8cdb-3d4cd2274b79)
+
+
