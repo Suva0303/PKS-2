@@ -1,4 +1,4 @@
-# Отчет по практике №3  
+# Отчет по практике №6
 ## Дисциплина: Программирование корпоративных систем
 ### Студент: Алибеков Кайратбек 
 ### Группа: ЭФБО-07-22
@@ -11,19 +11,20 @@ _______
 
 ______
 ## Главная страница 
-![Screenshot 2024-09-21 205719](https://github.com/user-attachments/assets/562a382d-b3e3-4e2e-a4f6-58fff89bd491)
+![image](https://github.com/user-attachments/assets/79983084-350c-43d0-a1c1-d7d03efbad11)
 
 
 ________
-## Старница товара 
+## Старница корзина 
 
-![Screenshot 2024-09-21 205807](https://github.com/user-attachments/assets/72e2f7e4-ac15-4ab1-a82c-1650383f59fb)
-
-
-## Страница покупки книги 
-
-![Screenshot 2024-09-21 205906](https://github.com/user-attachments/assets/57865a36-299e-4ae1-92d4-f6b324255dc2)
+![image](https://github.com/user-attachments/assets/f154cd8b-f08b-45f0-a4f5-2c27bb00bd52)
 
 
-## Версия на эмуляторе 
-![Screenshot 2024-09-21 203516](https://github.com/user-attachments/assets/f241387c-0a04-4550-9103-ce0e5f7fc12a)
+## Редактирование и удаление товара  
+![image](https://github.com/user-attachments/assets/268cc028-3622-43a5-9db0-9ba2342a7f1f)
+
+
+
+https://github.com/user-attachments/assets/6da6864e-757b-47be-90fd-362217ad60ea
+
+
