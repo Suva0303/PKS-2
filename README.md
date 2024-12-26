@@ -1,4 +1,4 @@
-# Отчет по практике № 7 
+# Отчет по практике № 8
 ## Дисциплина: Программирование корпоративных систем
 ### Студент: Алибеков Кайратбек 
 ### Группа: ЭФБО-07-22
@@ -7,20 +7,11 @@
 ### Семестр - 5 семестр, 2024-2025 гг.
 _______
 
-## В данной практической работе необходимо разработать проект на Flutter используя макет Figma
-______
-## Главная страница 
-![image](https://github.com/user-attachments/assets/1f6186c4-33ab-4a64-a786-fa2f22a3f3a2)
+## Каталог main.go
+В данной практической работе реализован карточки товара через main.go
 
+Главный экран 
+![image](https://github.com/user-attachments/assets/33cfd4c1-a3aa-4503-be5a-82d2aa05b807)
 
-________
-## Старница Корзина 
-
-![image](https://github.com/user-attachments/assets/34719f40-910d-4d61-b315-5575d572e84e)
-
-## Страница профиля
-![image](https://github.com/user-attachments/assets/8c34998e-e645-4bc8-acf0-be5f4106cddd)
-
-
-https://github.com/user-attachments/assets/08b46daa-87ef-4fb6-be28-f2acc34cec4c
-
+Работа сервера
+![photo_5433834018803151218_y](https://github.com/user-attachments/assets/3c977e65-a50e-463e-92bc-c06a0bbfc267)
