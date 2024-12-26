@@ -1,4 +1,4 @@
-# Отчет по практике №6
+# Отчет по практике №10
 ## Дисциплина: Программирование корпоративных систем
 ### Студент: Алибеков Кайратбек 
 ### Группа: ЭФБО-07-22
@@ -10,21 +10,8 @@ _______
 Запуск на Chrome 
 
 ______
-## Главная страница 
-![image](https://github.com/user-attachments/assets/79983084-350c-43d0-a1c1-d7d03efbad11)
+Регистрация
 
+В данной практической работе добавлен функционал регистрации
 
-________
-## Старница корзина 
-
-![image](https://github.com/user-attachments/assets/f154cd8b-f08b-45f0-a4f5-2c27bb00bd52)
-
-
-## Редактирование и удаление товара  
-![image](https://github.com/user-attachments/assets/268cc028-3622-43a5-9db0-9ba2342a7f1f)
-
-
-
-https://github.com/user-attachments/assets/6da6864e-757b-47be-90fd-362217ad60ea
-
-
+![image](https://github.com/user-attachments/assets/371f5bb5-38e7-4638-9732-65e63c739b6d)
